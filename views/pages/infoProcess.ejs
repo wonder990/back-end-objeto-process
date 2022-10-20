@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Info process</title>
+<link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+    crossorigin="anonymous">
+</link>
+  </head>
+  <body class="w-100 h-100 px-5 py-5 d-flex justify-content-center">
+    <div class="w-100 shadow py-5 px-5 fw-bold">
+      <p>Argumentos:</p>
+      <ol>
+      <% info.args.forEach(function(arg){ %>
+        <li><%= arg %></li>
+      <% }) %>
+      </ol>
+      <p>Carpeta del proyecto: <%= info.cwd%></p>
+      <p>Id del proceso: <%= info.pid%></p>
+      <p>Version de node.js: <%= info.version%></p>
+      <p>Path de ejecución: <%= info.title%></p>
+      <p>Sistema operativo: <%= info.os%></p>
+      <p>Memoria total reservada: <%= info.memoryUsage%></p>
+    </div>
+  </body>
+</html>
